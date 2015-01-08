@@ -2,6 +2,6 @@
 <p>HD Seattle</p>
 <% if signed_in? %>
 <%= current_user.email %>
+<li><%= link_to '<i class="glyphicon glyphicon-off"></i> Sign Out'.html_safe, destroy_user_session_path, method: :delete %></li>
 <% end %>
 
-<li><%= link_to '<i class="glyphicon glyphicon-off"></i> Sign Out'.html_safe, destroy_user_session_path, method: :delete %></li>
