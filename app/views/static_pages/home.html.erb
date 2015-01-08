@@ -1,0 +1,7 @@
+<h1>Hello World</h1>
+<h1>HD Seattle</h1>
+<% if signed_in? %>
+<%= current_user.email %>
+<% end %>
+
+<li><%= link_to '<i class="glyphicon glyphicon-off"></i> Sign Out'.html_safe, destroy_user_session_path, method: :delete %></li>
