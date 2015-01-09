@@ -76,6 +76,7 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
+  config.action_mailer.default_url_options = { :host => 'hdseattle.herokuapp.com' }
   ActionMailer::Base.smtp_settings = {
   :port           => '25', # or 2525
   :address        => ENV['POSTMARK_SMTP_SERVER'],
