@@ -1,0 +1,26 @@
+.jumbotron {
+  padding: 30px;
+  margin-bottom: 30px;
+  color: inherit;
+  background-color: #E8E8E8;
+/*	background-image: url('/assets/divider1.jpg');
+	background-position: center center;
+	background-size: cover;*/
+}
+
+
+#error_explanation {
+	color: #f00;
+	ul {
+		list-style: none;
+		margin: 0 0 18px 0;
+	}
+}
+
+.alert {
+	margin-bottom: 0px;
+	padding:7px;
+	text-align:center;
+	font-style: bold;
+}
+	

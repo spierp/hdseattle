@@ -1,0 +1,42 @@
+<header>
+	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	      <div class="container">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand" href="#" style=""><%= image_tag('blocks.png', :width => 34, :height => 34, :style => "margin:0px;padding:0px;margin-top:-7px").to_s %></a>
+	        </div>
+	        <div class="navbar-collapse collapse">
+	          <ul class="nav navbar-nav navbar-right">
+				<% if signed_in? %>
+				<li class="dropdown 2">
+	              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					<%# if current_user.image? %>
+					<%#= image_tag(current_user.image_url(:tiny), :width => 19, :height => 19, :style => "background:lightgrey;padding:1px; margin:0px 2px 0px 0px;").to_s %>
+					<%# else %>
+					<%#= image_tag('user.jpg', :width => 19, :height => 19, :style => "background:lightgrey;padding:1px; margin:0px 2px 0px 0px").to_s %>
+					<%# end %>
+					<%= current_user.email %>
+					<b class="caret"></b></a>
+	              <ul class="dropdown-menu">
+	                <li><a href="#">Action</a></li>
+	                <li><a href="#">Another action</a></li>
+	                <li><a href="#">Something else here</a></li>
+	                <li class="divider"></li>
+	                <li class="dropdown-header">User Settings</li>
+					<li><%= link_to '<i class="glyphicon glyphicon-cog"></i> Settings'.html_safe, edit_user_registration_path %><li>
+					<li><%= link_to '<i class="glyphicon glyphicon-off"></i> Sign Out'.html_safe, destroy_user_session_path, method: :delete %><li>
+	              </ul>
+	            </li>
+				<% else %>
+				<li><%= link_to '<i class="glyphicon glyphicon-off"></i> Sign In'.html_safe, new_user_session_path %></li>
+				<% end %>	
+	          </ul>
+	        </div><!--/.nav-collapse -->
+	      </div>
+	    </div>
+</header>	
