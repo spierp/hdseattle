@@ -3,11 +3,35 @@
   margin-bottom: 30px;
   color: inherit;
   background-color: #E8E8E8;
-/*	background-image: url('/assets/divider1.jpg');
+	background-image: url('/assets/intro-back-gr.jpg');
 	background-position: center center;
-	background-size: cover;*/
+	background-size: cover;
 }
 
+.intro-message {
+  position: relative;
+  text-align: center;
+  color: white;
+  padding-top: 20%;
+  padding-bottom: 20%;
+}
+
+.intro-message > h1 {
+  margin: 0;
+  text-shadow: 2px 1px 2px rgba(0,0,0,0.8);
+  font-size: 5em;
+}
+
+.intro-message > p {
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+  font-size: 2em;
+}
+
+.intro-divider {
+  width: 400px;
+  border-top: 1px solid #f8f8f8;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
 
 #error_explanation {
 	color: #f00;
@@ -23,4 +47,19 @@
 	text-align:center;
 	font-style: bold;
 }
-	
+
+
+@media(max-width:767px) {
+  .intro-message {
+    padding-bottom: 5%;
+
+  }
+
+  .intro-message > h1 {
+    font-size: 2.5em;
+  }
+
+  .intro-divider {
+    width: 100%;
+  }
+}
