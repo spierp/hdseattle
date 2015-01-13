@@ -1,3 +1,10 @@
+.navbar-default .navbar-brand {
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+}
+
+
+
 @media(min-width:767px) {
   .navbar {
     padding: 20px 0;
@@ -8,6 +15,8 @@
     -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
     transition: background .5s ease-in-out,padding .5s ease-in-out;
   }
+
+
 
   .top-nav-collapse {
     padding: 0;
@@ -21,4 +30,5 @@
   .navbar-custom.top-nav-collapse {
     border-bottom: 1px solid rgba(255,255,255,.3);
   }
+
 }
