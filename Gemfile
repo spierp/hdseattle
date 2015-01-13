@@ -5,8 +5,8 @@ ruby "2.2.0"
 gem 'rails', '4.2.0'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', group: :development
-gem "letter_opener", :group => :development
+gem 'sqlite3', '~> 1.3.10', group: :development
+gem "letter_opener", '~> 1.3.0', :group => :development
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -32,9 +32,9 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 # Image upload handling
-gem "carrierwave"#, '0.9.0'
-gem "rmagick"
-gem 'fog'
+gem "carrierwave", '~> 0.10.0'
+gem "rmagick", '~> 2.13.4'
+gem 'fog', '~> 1.26.0'
 
 #heroku compatability
  gem 'rails_12factor', group: :production

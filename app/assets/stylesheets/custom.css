@@ -3,9 +3,8 @@ body {
 }
 
 .jumbotron {
-  padding: 30px;
+  padding: 0px;
   margin-bottom: 30px;
-  margin-top:-45px;
   background-color: #E8E8E8;
 	background-image: url('/assets/intro-back-gr.jpg');
 	background-position: center center;
@@ -18,42 +17,52 @@ body {
   color: white;
   padding-top: 20%;
   padding-bottom: 20%;
+
 }
 
 .intro-message > h1 {
   margin: 0;
   text-shadow: 2px 1px 2px rgba(0,0,0,0.8);
-  font-size: 5em;
+  font-size: 4em;
   font-weight:300-light;
 }
 
-.intro-message > p {
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+.intro-message > h3 {
+  margin: 0;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
   font-size: 2em;
+  font-weight:300-light;
 }
 
 .intro-divider {
-  width: 400px;
+  width: 500px;
   border-top: 1px solid #f8f8f8;
   border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
-#error_explanation {
-	color: #f00;
-	ul {
-		list-style: none;
-		margin: 0 0 18px 0;
-	}
-}
-
 .alert {
 	margin-bottom: 0px;
-	padding:7px;
+	padding:15px;
 	text-align:center;
 	font-style: bold;
   border-radius: 0px !important;
   text-shadow: none !important;
 }
+
+.alert-info {
+  color: #2b3a73;
+  border: 0px;
+
+}
+
+@media(min-width:767px) {
+
+  .alert-info {
+    margin-top:50px;
+  }
+
+}
+
 
 @media(max-width:767px) {
 
@@ -62,7 +71,6 @@ body {
 
   }
   .jumbotron {
-    margin-top:5px;
 
   }
   .navbar-default {
@@ -70,9 +78,17 @@ body {
   }
   .intro-message > h1 {
     font-size: 2.5em;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+  }
+
+  .intro-message > h3 {
+    margin: 0;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+    font-size: 1.5em;
+    font-weight:300-light;
   }
 
   .intro-divider {
-    width: 100%;
+    width: 80%;
   }
 }
