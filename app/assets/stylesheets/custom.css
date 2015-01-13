@@ -9,6 +9,11 @@ body {
   }
 }*/
 
+.bg-light-gray {
+  background-color: lightgray;
+}
+
+
 .jumbotron {
   padding: 0px;
   margin-bottom: 30px;
@@ -36,7 +41,7 @@ body {
 
 .intro-message > h3 {
   margin: 0;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+  text-shadow: 1px 1px 1px rgba(0,0,0,1);
   font-size: 2em;
   font-weight:300-light;
 }

@@ -14,12 +14,6 @@ section {
 }
 
 
-@media(min-width:767px) {
-  #portfolio .portfolio-item {
-    margin: 0 0 30px;
-  }
-}
-
 .timeline {
   position: relative;
   padding: 0;
@@ -82,7 +76,7 @@ section {
   width: 80px;
   height: 80px;
   margin-left: 0;
-  border: 7px solid lightgray;
+  border: 4px solid lightgray;
   border-radius: 100%;
   text-align: center;
   color: #fff;
@@ -146,15 +140,16 @@ section {
   .timeline>li .timeline-panel {
     float: left;
     width: 41%;
-    padding: 0 20px 20px 30px;
+    padding: 0px 40px 20px 0px;
     text-align: right;
   }
 
   .timeline>li .timeline-image {
     left: 50%;
-    width: 100px;
-    height: 100px;
-    margin-left: -50px;
+    width: 150px;
+    height: 150px;
+    margin-left: -75px;
+    border: 7px solid lightgray;
   }
 
   .timeline>li .timeline-image h4 {
@@ -165,7 +160,7 @@ section {
 
   .timeline>li.timeline-inverted>.timeline-panel {
     float: right;
-    padding: 0 30px 20px 20px;
+    padding: 0px 0px 20px 40px;
     text-align: left;
   }
 }
@@ -176,13 +171,14 @@ section {
   }
 
   .timeline>li .timeline-panel {
-    padding: 0 20px 20px;
+    padding: 0px 40px 20px 0px;
   }
 
   .timeline>li .timeline-image {
-    width: 150px;
-    height: 150px;
-    margin-left: -75px;
+    width: 200px;
+    height: 200px;
+    margin-left: -100px;
+    border: 7px solid lightgray;
   }
 
   .timeline>li .timeline-image h4 {
@@ -192,23 +188,23 @@ section {
   }
 
   .timeline>li.timeline-inverted>.timeline-panel {
-    padding: 0 20px 20px;
+    padding: 0px 0px 20px 40px;
   }
 }
 
 @media(min-width:1200px) {
   .timeline>li {
-    min-height: 170px;
+    min-height: 250px;
   }
 
   .timeline>li .timeline-panel {
-    padding: 0 20px 20px 100px;
+    padding: 50px 50px 20px 5px;
   }
 
   .timeline>li .timeline-image {
-    width: 170px;
-    height: 170px;
-    margin-left: -85px;
+    width: 250px;
+    height: 250px;
+    margin-left: -125px;
   }
 
   .timeline>li .timeline-image h4 {
@@ -216,6 +212,6 @@ section {
   }
 
   .timeline>li.timeline-inverted>.timeline-panel {
-    padding: 0 100px 20px 20px;
+    padding: 50px 5px 20px 50px;
   }
 }
