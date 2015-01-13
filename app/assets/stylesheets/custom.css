@@ -1,6 +1,7 @@
 .jumbotron {
   padding: 30px;
   margin-bottom: 30px;
+  margin-top:-45px;
   color: inherit;
   background-color: #E8E8E8;
 	background-image: url('/assets/intro-back-gr.jpg');
@@ -46,15 +47,23 @@
 	padding:7px;
 	text-align:center;
 	font-style: bold;
+  border-radius: 0px !important;
+  text-shadow: none !important;
 }
 
-
 @media(max-width:767px) {
+
   .intro-message {
     padding-bottom: 5%;
 
   }
+  .jumbotron {
+    margin-top:5px;
 
+  }
+  .navbar-default {
+    background-color: rgba(255,255,255,.9);
+  }
   .intro-message > h1 {
     font-size: 2.5em;
   }
