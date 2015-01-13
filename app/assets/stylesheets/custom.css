@@ -1,5 +1,6 @@
 body {
   font-family: 'Open Sans', sans-serif;
+  padding-top:50px;
 }
 
 .jumbotron {
@@ -54,15 +55,6 @@ body {
   border: 0px;
 
 }
-
-@media(min-width:767px) {
-
-  .alert-info {
-    margin-top:50px;
-  }
-
-}
-
 
 @media(max-width:767px) {
 
