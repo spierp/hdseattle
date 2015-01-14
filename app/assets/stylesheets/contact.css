@@ -1,0 +1,34 @@
+.bg-dark-gray {
+  background-image: url('/assets/back-grain.png');
+  color:lightgray;
+}
+
+.bg-dark-gray > h4 {
+  margin: 0;
+  text-shadow: 1px 1px 1px rgba(0,0,0,1);
+  font-size: 1.5em;
+  font-weight:300-light;
+}
+
+.bg-dark-gray .p {
+  color: white;
+}
+
+.contact-image {
+  margin: 10px 0px 15px 15px;
+  position: block;
+  width: 140px;
+  height: 140px;
+  border: 3px solid lightgray;
+  box-shadow: 1px 2px 1px rgba(0,0,0,1);
+  border-radius: 100%;
+}
+
+@media(min-width:768px) {
+  .contact-image {
+    margin: 10px 0 15px 0;
+    border: 4px solid lightgray;
+    width: 175px;
+    height: 175px;
+  }
+}
