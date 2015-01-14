@@ -10,17 +10,16 @@
           <div><%= f.text_field :first_name, :autofocus => true, :class => "form-control", :autocomplete => "on",
           style: "border-top-left-radius: 7px; border-top-right-radius: 7px;" %></div>
           <div><%= f.text_field :last_name, :class => "form-control" %></div>
-          <div><%= f.email_field :email, :placeholder => "Email Address", :class => "form-control" %></div>
+          <div><%= f.email_field :email, readonly: "true", :class => "form-control" %></div>
           <div><%= f.password_field :password, :placeholder => "New Password", :class => "form-control", :autocomplete => "off" %></div>
           <div><%= f.password_field :password_confirmation, :placeholder => "New Password Confirmation", :class => "form-control", :autocomplete => "off" %></div>
           <div><%= f.password_field :current_password, :placeholder => "Current Password", :class => "form-control" %></div>
           <div class="avatar-upload">
-              <i>Profile Picture</i><br />
               <%= image_tag(current_user.image_url(:medium), class: "avatar-edit").to_s %><br>
               <div class="container">
                 <%= f.file_field :image %>
+                <br>
               </div>
-              <br>
           </div>
           <br>
           <div id="loading">
@@ -33,7 +32,7 @@
         <%= f.submit "Update", class: "btn btn-lg btn-primary", id: "submitbtn" %>
         <% end %>
           <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %>.</p>
-      <%= link_to "Back", :back %>
+      <%#= link_to "Back", :back %>
           </div>
         </div>
     </div>
