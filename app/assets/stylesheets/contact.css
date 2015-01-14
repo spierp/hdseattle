@@ -1,17 +1,14 @@
 .bg-dark-gray {
   background-image: url('/assets/back-grain.png');
-  color:lightgray;
+  color: #868686;
 }
 
 .bg-dark-gray > h4 {
   margin: 0;
   text-shadow: 1px 1px 1px rgba(0,0,0,1);
   font-size: 1.5em;
+  color:#dfdfdf;
   font-weight:300-light;
-}
-
-.bg-dark-gray .p {
-  color: white;
 }
 
 .contact-image {
@@ -31,4 +28,11 @@
     width: 175px;
     height: 175px;
   }
+}
+
+.twitter {
+  border: 2px solid #717171;
+  box-shadow: 2px 2px 2px rgba(0,0,0,1);
+  border-radius: 3%;
+  padding:10px;
 }
