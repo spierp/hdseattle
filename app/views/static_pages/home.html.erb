@@ -108,14 +108,24 @@
           data-lang="en">
           Follow @PBSpier
         </a>
-          <a class="twitter-timeline" data-chrome="noheader nofooter transparent" data-theme="dark" height="400" href="https://twitter.com/PBSpier" data-widget-id="555463397957836800">Tweets by @PBSpier</a>
+          <a class="twitter-timeline"
+          data-chrome="noheader nofooter transparent"
+          data-theme="dark"
+          height="400"
+          data-link-color="#008cba"
+          href="https://twitter.com/PBSpier"
+          data-widget-id="555463397957836800">Tweets by @PBSpier</a>
           </div>
       </div>
     </div>
   </div>
+  <div style="padding-top:35px; text-align:center">
+    <small>HDCCo © 2015<br>
+      <i class="glyphicon glyphicon-globe"></i> <a href="http://wwww.hdcco.com">hdcco.com</a><br>
+    </small>
+  </div>
 </section>
 
-hello there
 
 <script>
 function initialize() {
@@ -123,6 +133,7 @@ function initialize() {
   var mapOptions = {
     zoom: 14,
     scrollwheel: false,
+    draggable: false,
     center: myLatlng
   };
 
