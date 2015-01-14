@@ -12,7 +12,7 @@
           <div><%= f.email_field :email, :placeholder => "Email Address", :class => "form-control" %></div>
           <div><%= f.password_field :password, :placeholder => "New Password", :class => "form-control", :autocomplete => "off" %></div>
           <div><%= f.password_field :password_confirmation, :placeholder => "New Password Confirmation", :class => "form-control", :autocomplete => "off" %></div>
-          <div><%= f.password_field :current_password, :placeholder => "Current Password", :class => "form-control" %></div>        
+          <div><%= f.password_field :current_password, :placeholder => "Current Password", :class => "form-control" %></div>
           <div style="background:darkgrey">
               <%= f.label :image %> <i>(Profile Picture)</i><br />
               <%#= image_tag(current_user.image_url(:medium), :width => 125, :height => 125, :style => "background:lightgray; padding:2px;margin-bottom:10px").to_s %><br>
@@ -25,7 +25,7 @@
                       Updating...
                   </p>
               </div>
-          </div>  
+          </div>
         <%= f.submit "Update", class: "btn btn-lg btn-primary", id: "submitbtn" %>
         <% end %>
           <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %>.</p>
@@ -35,23 +35,4 @@
     </div>
 </div>
 
-<script type="text/javascript">
-    $(function () {
-        $("#submitbtn").click(function () {
-            $("#loading").fadeIn();
-            var opts = {
-                lines: 15, // The number of lines to draw
-                length: 27, // The length of each line
-                width: 5, // The line thickness
-                radius: 20, // The radius of the inner circle
-                color: '#000', // #rgb or #rrggbb
-                speed: 1, // Rounds per second
-                trail: 60, // Afterglow percentage
-                shadow: false, // Whether to render a shadow
-                hwaccel: false // Whether to use hardware acceleration
-            };
-            var target = document.getElementById('loading');
-            var spinner = new Spinner(opts).spin(target);
-        });
-    });
-</script>
+<%= render 'shared/spinner' %>

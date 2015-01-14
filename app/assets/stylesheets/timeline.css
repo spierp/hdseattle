@@ -133,7 +133,7 @@ section {
   }
 
   .timeline>li {
-    margin-bottom: 100px;
+    margin-bottom: 25px;
     min-height: 100px;
   }
 
@@ -168,6 +168,7 @@ section {
 @media(min-width:992px) {
   .timeline>li {
     min-height: 150px;
+    margin-bottom: 100px;
   }
 
   .timeline>li .timeline-panel {
