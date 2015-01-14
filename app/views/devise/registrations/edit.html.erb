@@ -14,10 +14,12 @@
           <div><%= f.password_field :password, :placeholder => "New Password", :class => "form-control", :autocomplete => "off" %></div>
           <div><%= f.password_field :password_confirmation, :placeholder => "New Password Confirmation", :class => "form-control", :autocomplete => "off" %></div>
           <div><%= f.password_field :current_password, :placeholder => "Current Password", :class => "form-control" %></div>
-          <div style="background:darkgrey; border-bottom-left-radius: 7px; border-bottom-right-radius: 7px;">
-              <%= f.label :image %> <i>(Profile Picture)</i><br />
-              <%#= image_tag(current_user.image_url(:medium), :width => 125, :height => 125, :style => "background:lightgray; padding:2px;margin-bottom:10px").to_s %><br>
-              <%= f.file_field :image %>
+          <div class="avatar-upload">
+              <i>Profile Picture</i><br />
+              <%= image_tag(current_user.image_url(:medium), class: "avatar-edit").to_s %><br>
+              <div class="container">
+                <%= f.file_field :image %>
+              </div>
               <br>
           </div>
           <br>

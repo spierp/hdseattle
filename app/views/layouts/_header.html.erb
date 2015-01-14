@@ -15,7 +15,7 @@
 				<% if signed_in? %>
 				<li class="dropdown 2">
 	              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-					<%= image_tag(current_user.image_url(:tiny), :width => 19, :height => 19, :style => "background:lightgrey;padding:1px; margin:0px 2px 0px 0px;").to_s %>
+					<%= image_tag(current_user.image_url(:tiny), class: "avatar").to_s %>
 					<%= current_user.email %>
 					<b class="caret"></b></a>
 	              <ul class="dropdown-menu">
