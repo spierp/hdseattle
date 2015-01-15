@@ -26,8 +26,7 @@
       <td><% if user.admin? %>Admin<% end %></td>
       <td><%= user.id %></td>
       <td><%= link_to "Delete", user, method: :delete,
-      confirm: "You sure?",
-      title: user.first_name %></td>
+      data: { confirm: 'Delete User.  Are you sure? This cannot be undone.' }  %></td>
     </tr>
     <% end %>
   </table>

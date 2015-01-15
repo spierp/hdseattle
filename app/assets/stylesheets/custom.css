@@ -116,3 +116,8 @@ body {
   border-bottom-right-radius: 7px;
   padding-top:10px;
 }
+
+
+.table>tbody>tr>td {
+  vertical-align: middle
+}
