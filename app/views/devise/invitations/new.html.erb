@@ -1,12 +1,39 @@
-<h2><%= t "devise.invitations.new.header" %></h2>
+<%= render 'shared/userstyle' %>
 
-<%= form_for resource, :as => resource_name, :url => invitation_path(resource_name), :html => {:method => :post} do |f| %>
-  <%= devise_error_messages! %>
+<div class="site-wrapper">
+  <div class="site-wrapper-inner">
+    <div class="cover-container">
 
-<% resource.class.invite_key_fields.each do |field| -%>
-  <p><%= f.label field %><br />
-  <%= f.text_field field %></p>
-<% end -%>
+      <div class="inner cover">
 
-  <p><%= f.submit t("devise.invitations.new.submit_button") %></p>
-<% end %>
+
+        <h2><%= image_tag('blocks.png', :width => 43, :height => 43, :style => "margin:0px").to_s %> Invitations</h2>
+        <%= form_for resource, :as => resource_name,
+        :url => invitation_path(resource_name),
+        :html => {:method => :post},
+        :class => "form-signin" do |f| %>
+        <p><%= devise_error_messages! %></p>
+        <% resource.class.invite_key_fields.each do |field| -%>
+          <div><%= f.text_field :first_name, :autofocus => true, :placeholder => "First Name", :class => "form-control",
+          style: "border-top-left-radius: 7px; border-top-right-radius: 7px;" %></div>
+          <div><%= f.text_field :last_name, :placeholder => "Last Name", :class => "form-control" %></div>
+          <%= f.text_field field, :placeholder => "email", :class => "form-control" %>
+          <div class="avatar-upload">
+            <%= image_tag(resource.image_url(:medium), class: "avatar-edit").to_s %><br>
+            <div class="container">
+              <%= f.file_field :image %>
+              <br>
+            </div>
+          </div>
+          <br>
+          <% end -%>
+
+          <p><%= f.submit t("devise.invitations.new.submit_button"),
+          :id => "submitbtn",
+          class: "btn btn-lg btn-primary" %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -10,7 +10,7 @@
           <div><%= f.text_field :first_name, :autofocus => true, :class => "form-control", :autocomplete => "on",
           style: "border-top-left-radius: 7px; border-top-right-radius: 7px;" %></div>
           <div><%= f.text_field :last_name, :class => "form-control" %></div>
-          <div><%= f.email_field :email, readonly: "true", :class => "form-control" %></div>
+          <div><%= f.email_field :email, :class => "form-control", readonly: "true" %></div>
           <div><%= f.password_field :password, :placeholder => "New Password", :class => "form-control", :autocomplete => "off" %></div>
           <div><%= f.password_field :password_confirmation, :placeholder => "New Password Confirmation", :class => "form-control", :autocomplete => "off" %></div>
           <div><%= f.password_field :current_password, :placeholder => "Current Password", :class => "form-control" %></div>

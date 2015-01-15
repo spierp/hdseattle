@@ -1,0 +1,34 @@
+<div class="container">
+  <p><%= link_to raw("<i class=\"glyphicon glyphicon-plus\"></i> Add Users"), new_user_invitation_path, class: "btn btn-success", :style => "font-size:18px !important;padding:10px;margin-top:15px", :method => "get" %></p>
+  <h2>All User</h2>
+  <table class="table table-striped" id="allusers">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Dated added</th>
+        <th>Sign In Count</th>
+        <th>IP Address</th>
+        <th>Credentials</th>
+        <th>ID</th>
+        <th>Edit</th>
+      </tr>
+    </thead>
+    <% for user in @users %>
+    <tr>
+      <td><row>
+        <%= image_tag(user.image_url(:tiny), :width => 32, :height => 32, :style => "background:white; padding:0px; margin:0px").to_s %><strong style="margin-left:10px"><%= user.first_name %> <%= user.last_name %></strong>
+      </row></td>
+      <td><%= link_to user.email, "mailto:#{user.email}", :target => "_blank" %></td>
+      <td><%= user.created_at.strftime("%m/%d/%Y %I:%m %p") %></td>
+      <td><%= user.sign_in_count %></td>
+      <td><%= user.current_sign_in_ip %></td>
+      <td><% if user.admin? %>Admin<% end %></td>
+      <td><%= user.id %></td>
+      <td><%= link_to "Delete", user, method: :delete,
+      confirm: "You sure?",
+      title: user.first_name %></td>
+    </tr>
+    <% end %>
+  </table>
+</div>

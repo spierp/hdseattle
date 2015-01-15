@@ -1,14 +1,36 @@
-<h2><%= t 'devise.invitations.edit.header' %></h2>
+<%= render 'shared/userstyle' %>
 
-<%= form_for resource, :as => resource_name, :url => invitation_path(resource_name), :html => { :method => :put } do |f| %>
-  <%= devise_error_messages! %>
-  <%= f.hidden_field :invitation_token %>
+<div class="site-wrapper">
+  <div class="site-wrapper-inner">
+    <div class="cover-container">
 
-  <p><%= f.label :password %><br />
-  <%= f.password_field :password %></p>
+      <div class="inner cover">
 
-  <p><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></p>
 
-  <p><%= f.submit t("devise.invitations.edit.submit_button") %></p>
-<% end %>
+        <h2><%= image_tag('blocks.png', :width => 43, :height => 43, :style => "margin:0px").to_s %> Confirm your account:</h2>
+        <%= form_for resource, :as => resource_name, :url => invitation_path(resource_name), :html => { :method => :put }, :class => "form-signin" do |f| %>
+        <p><%= devise_error_messages! %></p>
+        <%= f.hidden_field :invitation_token %>
+        <div><%= f.text_field :first_name, :autofocus => true, :placeholder => "First Name", :class => "form-control",
+        style: "border-top-left-radius: 7px; border-top-right-radius: 7px;" %></div>
+        <div><%= f.text_field :last_name, :placeholder => "Last Name", :class => "form-control" %></div>
+        <div><%= f.password_field :password, :placeholder => "Password", :class => "form-control", :autocomplete => "off" %></div>
+        <div><%= f.password_field :password_confirmation, :placeholder => "Password Confirmation", :class => "form-control", :autocomplete => "off" %></div>
+        <%= f.email_field :email, :placeholder => "email", :class => "form-control", readonly: "true" %>
+        <div class="avatar-upload">
+          <%= image_tag(resource.image_url(:medium), class: "avatar-edit").to_s %><br>
+          <div class="container">
+            <%= f.file_field :image %>
+            <br>
+          </div>
+        </div>
+        <br>
+          <p><%= f.submit t("devise.invitations.edit.submit_button"),
+          :id => "submitbtn",
+          class: "btn btn-lg btn-primary" %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
