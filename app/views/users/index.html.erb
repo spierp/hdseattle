@@ -19,7 +19,7 @@
       <td><row>
         <%= image_tag(user.image_url(:tiny), :width => 32, :height => 32, :style => "background:white; padding:0px; margin:0px").to_s %><strong style="margin-left:10px"><%= user.first_name %> <%= user.last_name %></strong>
       </row></td>
-      <td><%= link_to user.email, "mailto:#{user.email}", :target => "_blank" %></td>
+      <td><%= link_to user.email, "/users/#{user.id}/edit" %></td>
       <td><%= user.created_at.strftime("%m/%d/%Y %I:%m %p") %></td>
       <td><%= user.sign_in_count %></td>
       <td><%= user.current_sign_in_ip %></td>

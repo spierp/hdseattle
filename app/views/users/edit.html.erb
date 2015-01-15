@@ -1,0 +1,38 @@
+<%= render 'shared/userstyle' %>
+
+<div class="site-wrapper">
+  <div class="site-wrapper-inner">
+    <div class="cover-container">
+      <div class="inner cover">
+        <h2><%= image_tag('blocks.png', :width => 43, :height => 43, :style => "margin:0px").to_s %> Update User</h2>
+        <%= form_for @user do |f| %>
+        <%= render 'shared/error_messages', object: @user %>
+        <div><%= f.text_field :first_name, :autofocus => true, :class => "form-control", :autocomplete => "on",
+        style: "border-top-left-radius: 7px; border-top-right-radius: 7px;" %></div>
+        <div><%= f.text_field :last_name, :class => "form-control" %></div>
+        <div><%= f.email_field :email, :class => "form-control", readonly: "true" %></div>
+        <div class="avatar-upload">
+          <%= image_tag(@user.image_url(:medium), class: "avatar-edit").to_s %><br>
+          <div class="container">
+            <%= f.file_field :image %>
+            <br>
+          </div>
+        </div>
+        <label><div><%= f.check_box :admin %> Admin</div></label>
+        <br>
+        <br>
+        <div id="loading">
+          <div id="loadingcontent">
+            <p id="loadingspinner">
+              Updating...
+            </p>
+          </div>
+        </div>
+        <%= f.submit "Update", class: "btn btn-lg btn-primary", id: "submitbtn" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render 'shared/spinner' %>
