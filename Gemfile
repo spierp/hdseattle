@@ -40,7 +40,8 @@ gem 'fog', '~> 1.26.0'
  gem 'rails_12factor', group: :production
  gem 'pg', group: :production
  gem 'unicorn', group: :production
-
+ gem 'newrelic_rpm'
+ 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
